@@ -13,7 +13,7 @@ db = Database()
 
 
 @ScreenShotBot.on_message(
-    filters.private & filters.regex("unban_user") & filters.user(Config.AUTH_USERS)
+    filters.private & filters.command("unban_user") & filters.user(Config.AUTH_USERS)
 )
 async def unban(c, m):
     if len(m.command) == 1:
