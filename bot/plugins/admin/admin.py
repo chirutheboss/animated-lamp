@@ -12,8 +12,8 @@ async def admin(c, m):
 
     text = "Current admins of the bot:\n\n"
     admins = await c.get_users(Config.AUTH_USERS)
-    for admn in admins:
-        text += f"\t- {admn.mention}\n"
+    for admin in admins:
+        text += f"\t- {admin.mention}\n"
 
     text += "\nAvailable admin commands are:\n"
     text += (
