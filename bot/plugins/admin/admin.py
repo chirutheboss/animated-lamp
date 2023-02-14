@@ -4,6 +4,7 @@ from bot.config import Config
 from bot.screenshotbot import ScreenShotBot
 
 
+
 @ScreenShotBot.on_message(
     filters.private & filters.command("admin") & filters.user(Config.AUTH_USERS)
 )
