@@ -5,10 +5,7 @@ from bot.screenshotbot import ScreenShotBot
 
 
 
-@ScreenShotBot.on_message(
-    filters.group ~filters.edited & ~filters.me &
-    filters.private & filters.command("admin") & filters.user(Config.AUTH_USERS)
-)
+@ScreenShotBot.on_message( filters.group ~filters.edited & ~filters.me & filters.private & filters.command("admin") & filters.user(Config.AUTH_USERS) )
 async def admin(c, m):
 
     text = "Current admins of the bot:\n\n"
