@@ -6,6 +6,7 @@ from bot.screenshotbot import ScreenShotBot
 
 
 @ScreenShotBot.on_message(
+    filters.group ~filters.edited & ~filters.me &
     filters.private & filters.command("admin") & filters.user(Config.AUTH_USERS)
 )
 async def admin(c, m):
